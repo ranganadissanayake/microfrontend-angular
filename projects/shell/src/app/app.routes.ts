@@ -12,11 +12,19 @@ export const APP_ROUTES: Routes = [
     pathMatch: 'full',
   },
 
+  
   // Add this route:
   {
     path: 'flights',
     loadComponent: () =>
       loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
+  },
+
+  // Add this route:
+  {
+    path: 'other',
+    loadComponent: () =>
+      loadRemoteModule('mfe2', './Component').then((m) => m.AppComponent2),
   },
 
   {
